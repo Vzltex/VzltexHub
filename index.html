@@ -19,7 +19,7 @@
 
         <style>
             body {
-				background-color: rgb(25, 25, 25);
+				background-color: rgb(255, 255, 255);
                 color: white;
                 font-family: "Trebuchet MS";
                 background-image: url(Background.png);
@@ -94,7 +94,7 @@
             }
 
             #copyBtn:hover {
-                background-color: rgb(70, 70, 70);
+                background-color: rgb(0, 0, 0);
             }
         </style>
     </head>
@@ -128,9 +128,6 @@
 
         <script type="text/javascript">
             const scriptBtn = document.getElementById("scriptBtn");
-            const copyPopup = document.getElementById("copyPopup");
-            const gamesBtn = document.getElementById("gamesBtn");
-            const discordBtn = document.getElementById("discordBtn");
 
             scriptBtn.addEventListener("click", () => {
                 const scriptBox = document.createElement("textarea");
@@ -141,14 +138,6 @@
                 document.body.removeChild(scriptBox);
                 copyPopup.style.display = "block";
                 setTimeout(() => {copyPopup.style.display = "none";}, 1000);
-            });
-
-            gamesBtn.addEventListener("click", () => {
-                window.open("https://vzltex.github.io/VzltexHub/Games");
-            });
-
-            discordBtn.addEventListener("click", () => {
-                window.open("");
             });
         </script>
     </body>
