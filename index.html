@@ -77,9 +77,12 @@
 
         <script type="text/javascript">
             const scriptBtn = document.getElementById("scriptBtn");
-
-            scriptBtn.addEventListener("click", () => {
-                const scriptBox = document.createElement("textarea");
+            const gamesBox = document.getElementById("gamesLabel");
+            const games = new XMLHttpRequest();
+		
+            games.onreadystatechange = () => {
+                gamesBox.innerText = games.responseText;
+            }
                 scriptBox.value = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/Vzltex/Vzltex/master/VzltexHub.txt"))();';
                 document.body.appendChild(scriptBox);
                 scriptBox.select();
